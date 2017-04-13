@@ -4,7 +4,7 @@
   "description": "Immutable versions of normally mutable array methods",
   "main": "index.js",
   "scripts": {
-    "build": "babel src --out-dir lib"
+    "prepublish": "babel src --out-dir lib"
   },
   "repository": {
     "type": "git",
