@@ -6,6 +6,14 @@
   "scripts": {
     "build": "babel src --out-dir lib"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/georapbox/immutable-arrays.git"
+  },
+  "bugs": {
+    "url": "https://github.com/georapbox/immutable-arrays/issues"
+  },
+  "homepage": "https://github.com/georapbox/immutable-arrays#readme",
   "keywords": [],
   "author": "George Raptis <georapbox@gmail.com> (georapbox.github.io)",
   "license": "MIT",
