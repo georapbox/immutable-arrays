@@ -6,5 +6,7 @@
  * @return {Array} A new array with the element removed.
  */
 export default function immutableDelete(array, index) {
-  return array.slice(0, index).concat(array.slice(index + 1));
+  return index > 0
+    ? array.slice(0, index).concat(array.slice(index + 1))
+    : array.slice(0);
 }
