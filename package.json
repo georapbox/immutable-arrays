@@ -1,5 +1,5 @@
 {
-  "name": "@georapbox/immutable-arrays",
+  "name": "immutable-arrays",
   "version": "0.1.0",
   "description": "Immutable versions of normally mutable array methods",
   "main": "index.js",
