@@ -2,7 +2,8 @@
   "env": {
     "browser": true,
     "node": true,
-    "es6": true
+    "es6": true,
+    "mocha": true
   },
   "parserOptions": {
     "ecmaVersion": 6,
@@ -245,7 +246,7 @@
     "keyword-spacing": 1,
 
     // enforce a maximum line length
-    "max-len": [1, 100, 2, {"ignoreComments": true, "ignoreTrailingComments": true, "ignoreUrls": true, "ignoreStrings": true, "ignoreTemplateLiterals": true}],
+    "max-len": [0, 100, 2, {"ignoreComments": true, "ignoreTrailingComments": true, "ignoreUrls": true, "ignoreStrings": true, "ignoreTemplateLiterals": true}],
 
     // enforce a maximum number of parameters in function definitions
     "max-params": [1, 5],
