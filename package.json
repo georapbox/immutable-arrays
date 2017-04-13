@@ -1,6 +1,6 @@
 {
   "name": "immutable-arrays",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Immutable versions of normally mutable array methods",
   "main": "lib/immutableArrays.js",
   "scripts": {
@@ -9,7 +9,8 @@
     "dev": "webpack --env=dev",
     "watch": "webpack --progress --colors --watch --env=dev",
     "lint": "eslint src/**/*.js",
-    "prepublish": "npm run dev & npm run build"
+    "prepublish": "npm run dev & npm run build",
+    "docs": "jsdoc2md 'src/immutable-delete.js'"
   },
   "repository": {
     "type": "git",
@@ -19,7 +20,18 @@
     "url": "https://github.com/georapbox/immutable-arrays/issues"
   },
   "homepage": "https://github.com/georapbox/immutable-arrays#readme",
-  "keywords": ["immutable", "array", "methods", "push", "pop", "delete", "unshift", "shift", "splice", "reverse"],
+  "keywords": [
+    "immutable",
+    "array",
+    "methods",
+    "push",
+    "pop",
+    "delete",
+    "unshift",
+    "shift",
+    "splice",
+    "reverse"
+  ],
   "author": "George Raptis <georapbox@gmail.com> (georapbox.github.io)",
   "license": "MIT",
   "devDependencies": {
