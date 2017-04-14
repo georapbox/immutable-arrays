@@ -65,7 +65,7 @@ a new array instead of mutating the original one.
 **Example**  
 ```js
 const originalArray = ['a', 'b', 'c', 'd', 'e'];
-const resultArray = push(originalArray, 'f', 'g');
+const resultArray = immutablePush(originalArray, 'f', 'g');
 // -> originalArray ['a', 'b', 'c', 'd', 'e']
 // -> resultArray ['a', 'b', 'c', 'd', 'e', 'f', 'g']
 ```
@@ -85,7 +85,7 @@ a new array instead of mutating the original one.
 **Example**  
 ```js
 const originalArray = ['a', 'b', 'c', 'd', 'e'];
-const resultArray = pop(originalArray);
+const resultArray = immutablePop(originalArray);
 // -> originalArray ['a', 'b', 'c', 'd', 'e']
 // -> resultArray ['a', 'b', 'c', 'd']
 ```
@@ -105,7 +105,7 @@ Deletes an element from an array by its index in the array.
 **Example**  
 ```js
 const originalArray = ['a', 'b', 'c', 'd', 'e'];
-const resultArray = del(originalArray, 2);
+const resultArray = immutableDelete(originalArray, 2);
 // -> originalArray ['a', 'b', 'c', 'd', 'e']
 // -> resultArray ['a', 'b', 'd', 'e']
 ```
