@@ -23,29 +23,21 @@ $ npm test
 
 <dl>
 <dt><a href="#immutablePush">immutablePush(array, ...elementN)</a> ⇒ <code>Array</code></dt>
-<dd><p>Adds one or more elements to the end of an array by returning
-a new array instead of mutating the original one.</p>
-</dd>
+<dd><p>Adds one or more elements to the end of an array by returning a new array instead of mutating the original one.</p></dd>
 <dt><a href="#immutablePop">immutablePop(array)</a> ⇒ <code>Array</code></dt>
-<dd><p>Removes the last element from an array by returning
-a new array instead of mutating the original one.</p>
-</dd>
+<dd><p>Removes the last element from an array by returning a new array instead of mutating the original one.</p></dd>
 <dt><a href="#immutableDelete">immutableDelete(array, index)</a> ⇒ <code>Array</code></dt>
-<dd><p>Deletes an element from an array by its index in the array.</p>
-</dd>
+<dd><p>Deletes an element from an array by its index in the array.</p></dd>
 <dt><a href="#immutableShift">immutableShift(array)</a> ⇒ <code>Array</code></dt>
-<dd><p>Removes the first element from an array.</p>
-</dd>
+<dd><p>Removes the first element from an array.</p></dd>
 <dt><a href="#immutableUnshift">immutableUnshift(array, ...elementN)</a> ⇒ <code>Array</code></dt>
-<dd><p>Adds one or more elements to the beginning of an array.</p>
-</dd>
+<dd><p>Adds one or more elements to the beginning of an array.</p></dd>
 <dt><a href="#immutableReverse">immutableReverse(array)</a> ⇒ <code>Array</code></dt>
-<dd><p>Reverses an array (not in place).
-The first array element becomes the last, and the last array element becomes the first.</p>
-</dd>
+<dd><p>Reverses an array (not in place). The first array element becomes the last, and the last array element becomes the first.</p></dd>
+<dt><a href="#immutableSort">immutableSort(array, [compareFunction])</a> ⇒ <code>Array</code></dt>
+<dd><p>Sorts the elements of an array (not in place) and returns a sorted array.</p></dd>
 <dt><a href="#immutableSplice">immutableSplice(array, [start], [deleteCount], [...elementN])</a> ⇒ <code>Array</code></dt>
-<dd><p>Removes existing elements and/or adds new elements to an array.</p>
-</dd>
+<dd><p>Removes existing elements and/or adds new elements to an array.</p></dd>
 </dl>
 
 <a name="immutablePush"></a>
@@ -54,7 +46,6 @@ The first array element becomes the last, and the last array element becomes the
 Adds one or more elements to the end of an array by returning
 a new array instead of mutating the original one.
 
-**Kind**: global function  
 **Returns**: <code>Array</code> - A new array with the new entries added to the end.  
 
 | Param | Type | Description |
@@ -69,13 +60,13 @@ const resultArray = immutablePush(originalArray, 'f', 'g');
 // -> originalArray ['a', 'b', 'c', 'd', 'e']
 // -> resultArray ['a', 'b', 'c', 'd', 'e', 'f', 'g']
 ```
+
 <a name="immutablePop"></a>
 
 ## immutablePop(array) ⇒ <code>Array</code>
 Removes the last element from an array by returning
 a new array instead of mutating the original one.
 
-**Kind**: global function  
 **Returns**: <code>Array</code> - A new array with the last element removed.  
 
 | Param | Type | Description |
@@ -89,12 +80,12 @@ const resultArray = immutablePop(originalArray);
 // -> originalArray ['a', 'b', 'c', 'd', 'e']
 // -> resultArray ['a', 'b', 'c', 'd']
 ```
+
 <a name="immutableDelete"></a>
 
 ## immutableDelete(array, index) ⇒ <code>Array</code>
 Deletes an element from an array by its index in the array.
 
-**Kind**: global function  
 **Returns**: <code>Array</code> - A new array with the element removed.  
 
 | Param | Type | Description |
@@ -109,12 +100,12 @@ const resultArray = immutableDelete(originalArray, 2);
 // -> originalArray ['a', 'b', 'c', 'd', 'e']
 // -> resultArray ['a', 'b', 'd', 'e']
 ```
+
 <a name="immutableShift"></a>
 
 ## immutableShift(array) ⇒ <code>Array</code>
 Removes the first element from an array.
 
-**Kind**: global function  
 **Returns**: <code>Array</code> - A new array with the first element removed.  
 
 | Param | Type | Description |
@@ -128,12 +119,12 @@ const resultArray = immutableShift(originalArray);
 // -> originalArray ['a', 'b', 'c', 'd', 'e']
 // -> resultArray ['b', 'c', 'd', 'e']
 ```
+
 <a name="immutableUnshift"></a>
 
 ## immutableUnshift(array, ...elementN) ⇒ <code>Array</code>
 Adds one or more elements to the beginning of an array.
 
-**Kind**: global function  
 **Returns**: <code>Array</code> - A new array with the new elements added to the front.  
 
 | Param | Type | Description |
@@ -148,13 +139,13 @@ const resultArray = immutableUnshift(originalArray, 'f', 'g');
 // -> originalArray ['a', 'b', 'c', 'd', 'e']
 // -> resultArray ['f', 'g', 'a', 'b', 'c', 'd', 'e']
 ```
+
 <a name="immutableReverse"></a>
 
 ## immutableReverse(array) ⇒ <code>Array</code>
 Reverses an array (not in place).
 The first array element becomes the last, and the last array element becomes the first.
 
-**Kind**: global function  
 **Returns**: <code>Array</code> - A new array reversed.  
 
 | Param | Type | Description |
@@ -168,12 +159,46 @@ const resultArray = immutableReverse(originalArray);
 // -> originalArray ['a', 'b', 'c', 'd', 'e']
 // -> resultArray ['e', 'd', 'c', 'b', 'a']
 ```
+
+<a name="immutableSort"></a>
+
+## immutableSort(array, [compareFunction]) ⇒ <code>Array</code>
+Sorts the elements of an array (not in place) and returns a sorted array.
+
+**Returns**: <code>Array</code> - A new sorted array.
+
+| Param | Type | Description |
+| --- | --- | --- |
+| array | <code>Array</code> | The original array. |
+| [compareFunction] | <code>Function</code> | Specifies a function that defines the sort order. If omitted, the array is sorted according to each character's Unicode code point value, according to the string conversion of each element. |
+
+**Example**  
+```js
+const numberArray = [20, 3, 4, 10, -3, 1, 0, 5];
+const stringArray = ['Blue', 'Humpback', 'Beluga'];
+
+const resultArray = immutableSort(numberArray, (a, b) => a - b);
+// -> numberArray [20, 3, 4, 10, -3, 1, 0, 5]
+// -> resultArray [-3, 0, 1, 3, 4, 5, 10, 20]
+
+const resultArray = immutableSort(numberArray, (a, b) => b - a);
+// -> numberArray [20, 3, 4, 10, -3, 1, 0, 5]
+// -> resultArray [20, 10, 5, 4, 3, 1, 0, -3]
+
+const resultArray = immutableSort(stringArray);
+// -> stringArray ['Blue', 'Humpback', 'Beluga']
+// -> resultArray ['Beluga', 'Blue', 'Humpback']
+
+const resultArray = immutableSort(stringArray, (a, b) => a.toLowerCase() < b.toLowerCase());
+// -> stringArray ['Blue', 'Humpback', 'Beluga']
+// -> resultArray ['Humpback', 'Blue', 'Beluga']
+```
+
 <a name="immutableSplice"></a>
 
 ## immutableSplice(array, [start], [deleteCount], [...elementN]) ⇒ <code>Array</code>
 Removes existing elements and/or adds new elements to an array.
 
-**Kind**: global function  
 **Returns**: <code>Array</code> - The result array.  
 
 | Param | Type | Default | Description |
