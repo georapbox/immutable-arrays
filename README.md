@@ -255,3 +255,7 @@ const resultArray = immutableSplice(originalArray, originalArray.length - 2, 2, 
 // -> originalArray ['a', 'b', 'c', 'd', 'e']
 // -> resultArray ['a', 'b', 'c', 'lorem', 'ipsum']
 ```
+
+## License
+
+[The MIT License (MIT)](https://georapbox.mit-license.org/@2017)
