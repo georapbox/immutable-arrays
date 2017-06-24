@@ -5,3 +5,5 @@
 
 ## v0.4.2
 - Keep devDependencies up to date
+- Add code climate integration
+- Add test coverage report

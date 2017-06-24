@@ -5,8 +5,7 @@
   "main": "lib/immutableArrays.js",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register --colors ./test/*.spec.js",
-    "coverage": "nyc mocha --compilers js:babel-core/register --colors ./test/*.spec.js",
-    "reporter": "nyc report --reporter=html",
+    "coverage": "nyc --reporter=html --reporter=text npm test",
     "build": "webpack --env=build",
     "dev": "webpack --env=dev",
     "watch": "webpack --progress --colors --watch --env=dev",
