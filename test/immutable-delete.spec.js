@@ -3,25 +3,30 @@ import chai from 'chai';
 
 const expect = chai.expect;
 
-const originalArray = ['a', 'b', 'c', 'd', 'e'];
-const resultArray = del(originalArray, 2);
+const arr = ['a', 'b', 'c', 'd', 'e'];
+const res1 = del(arr, 2);
+const res2 = del(arr, -2);
+const res3 = del(arr, 0);
 
 describe('immutable-delete', () => {
   it('original array should stay untouched', () => {
-    expect(originalArray).to.not.eql(resultArray);
+    expect(arr).to.not.eql(res1);
   });
 
   it('should have length 4', () => {
-    expect(resultArray).with.length(4);
+    expect(res1).with.length(4);
   });
 
   it('element at index 2 should now be "d"', () => {
-    expect(resultArray[2]).to.equal('d');
+    expect(res1[2]).to.equal('d');
   });
 
   it('result array should be equal to original if index is not positive integer', () => {
-    const res = del(originalArray, -2);
-    expect(res).with.length(originalArray.length);
-    expect(res).to.eql(['a', 'b', 'c', 'd', 'e']);
+    expect(res2).with.length(arr.length);
+    expect(res2).to.eql(['a', 'b', 'c', 'd', 'e']);
+  });
+
+  it('should delete "a" for index of 0', () => {
+    expect(res3).to.eql(['b', 'c', 'd', 'e']);
   });
 });
