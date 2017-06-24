@@ -3,6 +3,7 @@
 
 # testing
 /coverage
+.nyc_output
 
 # misc
 .DS_Store
