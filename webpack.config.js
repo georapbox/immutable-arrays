@@ -37,10 +37,15 @@ const config = {
     umdNamedDefine: true
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /(\.jsx|\.js)$/,
         loader: 'babel-loader',
+        exclude: /(node_modules|bower_components)/
+      },
+      {
+        test: /(\.jsx|\.js)$/,
+        loader: 'eslint-loader',
         exclude: /(node_modules|bower_components)/
       }
     ]
