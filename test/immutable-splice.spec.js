@@ -13,6 +13,7 @@ const res6 = splice(arr, 0, 0, 'lorem', 'ipsum');
 const res7 = splice(arr, arr.length, 0, 'lorem', 'ipsum');
 const res8 = splice(arr, 0, 2, 'lorem', 'ipsum');
 const res9 = splice(arr, arr.length - 2, 2, 'lorem', 'ipsum');
+const res10 = splice(arr);
 
 describe('immutable-splice', () => {
   it('original array should stay untouched', () => {
@@ -80,5 +81,9 @@ describe('immutable-splice', () => {
     expect(res9[1]).to.equal('b');
     expect(res9).to.not.include('d');
     expect(res9).to.not.include('e');
+  });
+
+  it('should return a new array with the same elements as the original one', () => {
+    expect(res10).to.eql(['a', 'b', 'c', 'd', 'e']);
   });
 });
