@@ -3,8 +3,11 @@ node_js:
   - 6.10.2
 branches:
   only:
-    - master
+    - /.*/
 before_script:
   - npm install
 script:
   - npm run coverage
+after_success:
+  - npm install -g codeclimate-test-reporter
+  - codeclimate-test-reporter < lcov.info
