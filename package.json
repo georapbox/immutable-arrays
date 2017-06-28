@@ -1,6 +1,6 @@
 {
   "name": "immutable-arrays",
-  "version": "0.4.3",
+  "version": "1.0.0",
   "description": "Immutable versions of normally mutable array methods",
   "main": "lib/immutableArrays.js",
   "scripts": {

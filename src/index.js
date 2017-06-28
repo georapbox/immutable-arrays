@@ -7,13 +7,22 @@ import immutableReverse from './immutable-reverse';
 import immutableSort from './immutable-sort';
 import immutableDelete from './immutable-delete';
 
+export const push = immutablePush;
+export const pop = immutablePop;
+export const shift = immutableShift;
+export const unshift = immutableUnshift;
+export const splice = immutableSplice;
+export const reverse = immutableReverse;
+export const sort = immutableSort;
+export const del = immutableDelete;
+
 export default {
-  immutablePush,
-  immutablePop,
-  immutableShift,
-  immutableUnshift,
-  immutableSplice,
-  immutableReverse,
-  immutableSort,
-  immutableDelete
+  push: immutablePush,
+  pop: immutablePop,
+  shift: immutableShift,
+  unshift: immutableUnshift,
+  splice: immutableSplice,
+  reverse: immutableReverse,
+  sort: immutableSort,
+  del: immutableDelete
 };
