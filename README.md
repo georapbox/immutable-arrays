@@ -8,6 +8,8 @@ Immutable versions of normally mutable array methods
 [![npm license](https://img.shields.io/npm/l/immutable-arrays.svg)](http://badge.fury.io/js/immutable-arrays)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 [![Code Climate](https://codeclimate.com/github/georapbox/immutable-arrays/badges/gpa.svg)](https://codeclimate.com/github/georapbox/immutable-arrays)
+[![Issue Count](https://codeclimate.com/github/georapbox/immutable-arrays/badges/issue_count.svg)](https://codeclimate.com/github/georapbox/immutable-arrays)
+[![Codecov](https://img.shields.io/codecov/c/github/georapbox/immutable-arrays/master.svg)](https://codecov.io/gh/georapbox/immutable-arrays)
 [![Dependencies](https://david-dm.org/georapbox/immutable-arrays.svg)](https://david-dm.org/georapbox/immutable-arrays)
 [![devDependency Status](https://david-dm.org/georapbox/immutable-arrays/dev-status.svg)](https://david-dm.org/georapbox/immutable-arrays#info=devDependencies)
 
