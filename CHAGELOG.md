@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v1.0.1
+
+- Keep devDependencies up to date.
+- Minor documentation updates.
+
+
 ## v1.0.0
 
 ### Changes
