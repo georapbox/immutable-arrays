@@ -1,6 +1,6 @@
 {
   "name": "immutable-arrays",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Immutable versions of normally mutable array methods",
   "main": "lib/immutableArrays.js",
   "scripts": {
@@ -10,8 +10,7 @@
     "dev": "webpack --env=dev",
     "watch": "webpack --progress --colors --watch --env=dev",
     "lint": "eslint src/**/*.js",
-    "prepublish": "npm run dev & npm run build",
-    "docs": "jsdoc2md 'src/immutable-delete.js'"
+    "prepublishOnly": "npm test && npm run dev && npm run build"
   },
   "repository": {
     "type": "git",
@@ -36,17 +35,17 @@
   "author": "George Raptis <georapbox@gmail.com> (georapbox.github.io)",
   "license": "MIT",
   "devDependencies": {
-    "babel-cli": "~6.24.1",
-    "babel-core": "~6.25.0",
+    "babel-cli": "~6.26.0",
+    "babel-core": "~6.26.0",
     "babel-loader": "~7.1.0",
     "babel-plugin-add-module-exports": "~0.2.1",
     "babel-preset-es2015": "~6.24.1",
-    "chai": "~4.0.2",
-    "eslint": "~4.1.0",
-    "eslint-loader": "~1.8.0",
-    "mocha": "~3.4.2",
-    "nyc": "~11.0.2",
-    "webpack": "~3.0.0",
-    "yargs": "~8.0.2"
+    "chai": "~4.1.2",
+    "eslint": "~4.12.1",
+    "eslint-loader": "~1.9.0",
+    "mocha": "~4.0.1",
+    "nyc": "~11.3.0",
+    "webpack": "~3.8.1",
+    "yargs": "~10.0.3"
   }
 }
