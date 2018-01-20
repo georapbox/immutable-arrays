@@ -1,6 +1,6 @@
 {
   "name": "immutable-arrays",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Immutable versions of normally mutable array methods",
   "main": "lib/immutableArrays.js",
   "scripts": {
@@ -41,11 +41,11 @@
     "babel-plugin-add-module-exports": "~0.2.1",
     "babel-preset-es2015": "~6.24.1",
     "chai": "~4.1.2",
-    "eslint": "~4.12.1",
+    "eslint": "~4.16.0",
     "eslint-loader": "~1.9.0",
-    "mocha": "~4.0.1",
-    "nyc": "~11.3.0",
-    "webpack": "~3.8.1",
-    "yargs": "~10.0.3"
+    "mocha": "~5.0.0",
+    "nyc": "~11.4.1",
+    "webpack": "~3.10.0",
+    "yargs": "~10.1.2"
   }
 }
