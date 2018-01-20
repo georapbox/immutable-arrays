@@ -12,7 +12,5 @@
  * // -> resultArray ['a', 'b', 'd', 'e']
  */
 export default function immutableDelete(array, index) {
-  return index >= 0
-    ? array.slice(0, index).concat(array.slice(index + 1))
-    : array.slice(0);
+  return index >= 0 ? [...array.slice(0, index), ...array.slice(index + 1)] : [...array];
 }
