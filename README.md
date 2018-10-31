@@ -89,7 +89,7 @@ import push from 'immutable-arrays/src/immutable-push';
   <dd><p>Deletes an element from an array by its index in the array.</p></dd>
 </dl>
 
-<a name="immutableArrays.push"></a>
+<a id="immutableArrays.push" name="immutableArrays.push"></a>
 
 ## immutableArrays.push(array, ...elementN) ⇒ <code>Array</code>
 Adds one or more elements to the end of an array by returning
@@ -110,7 +110,7 @@ const resultArray = immutableArrays.push(originalArray, 'f', 'g');
 // -> resultArray ['a', 'b', 'c', 'd', 'e', 'f', 'g']
 ```
 
-<a name="immutableArrays.pop"></a>
+<a id="immutableArrays.pop" name="immutableArrays.pop"></a>
 
 ## immutableArrays.pop(array) ⇒ <code>Array</code>
 Removes the last element from an array by returning
@@ -130,7 +130,7 @@ const resultArray = immutableArrays.pop(originalArray);
 // -> resultArray ['a', 'b', 'c', 'd']
 ```
 
-<a name="immutableArrays.shift"></a>
+<a id="immutableArrays.shift" name="immutableArrays.shift"></a>
 
 ## immutableArrays.shift(array) ⇒ <code>Array</code>
 Removes the first element from an array.
@@ -149,7 +149,7 @@ const resultArray = immutableArrays.shift(originalArray);
 // -> resultArray ['b', 'c', 'd', 'e']
 ```
 
-<a name="immutableArrays.unshift"></a>
+<a id="immutableArrays.unshift" name="immutableArrays.unshift"></a>
 
 ## immutableArrays.unshift(array, ...elementN) ⇒ <code>Array</code>
 Adds one or more elements to the beginning of an array.
@@ -169,7 +169,7 @@ const resultArray = immutableArrays.unshift(originalArray, 'f', 'g');
 // -> resultArray ['f', 'g', 'a', 'b', 'c', 'd', 'e']
 ```
 
-<a name="immutableArrays.reverse"></a>
+<a id="immutableArrays.reverse" name="immutableArrays.reverse"></a>
 
 ## immutableArrays.reverse(array) ⇒ <code>Array</code>
 Reverses an array (not in place).
@@ -189,7 +189,7 @@ const resultArray = immutableArrays.reverse(originalArray);
 // -> resultArray ['e', 'd', 'c', 'b', 'a']
 ```
 
-<a name="immutableArrays.sort"></a>
+<a id="immutableArrays.sort" name="immutableArrays.sort"></a>
 
 ## immutableArrays.sort(array, [compareFunction]) ⇒ <code>Array</code>
 Sorts the elements of an array (not in place) and returns a sorted array.
@@ -223,7 +223,7 @@ const resultArray = immutableArrays.sort(stringArray, (a, b) => a.toLowerCase() 
 // -> resultArray ['Humpback', 'Blue', 'Beluga']
 ```
 
-<a name="immutableArrays.splice"></a>
+<a id="immutableArrays.splice" name="immutableArrays.splice"></a>
 
 ## immutableArrays.splice(array, [start], [deleteCount], [...elementN]) ⇒ <code>Array</code>
 Removes existing elements and/or adds new elements to an array.
@@ -285,7 +285,7 @@ const resultArray = immutableArrays.splice(originalArray, originalArray.length -
 // -> resultArray ['a', 'b', 'c', 'lorem', 'ipsum']
 ```
 
-<a name="immutableArrays.del"></a>
+<a id="immutableArrays.del" name="immutableArrays.del"></a>
 
 ## immutableArrays.del(array, index) ⇒ <code>Array</code>
 Deletes an element from an array by its index in the array.
@@ -295,7 +295,7 @@ Deletes an element from an array by its index in the array.
 | Param | Type | Description |
 | --- | --- | --- |
 | array | <code>Array</code> | The original array. |
-| index | <code>Number</code> | The index of the element to delete in the original array. |
+| index | <code>Number</code> | The index of the element to delete in the original array. If index is a negative number, the original array is returned. |
 
 **Example**  
 ```js
@@ -303,6 +303,10 @@ const originalArray = ['a', 'b', 'c', 'd', 'e'];
 const resultArray = immutableArrays.del(originalArray, 2);
 // -> originalArray ['a', 'b', 'c', 'd', 'e']
 // -> resultArray ['a', 'b', 'd', 'e']
+
+const resultArray2 = immutableDelete(originalArray, -1);
+// -> originalArray ['a', 'b', 'c', 'd', 'e']
+// -> resultArray2 ['a', 'b', 'c', 'd', 'e']
 ```
 
 ## Test
