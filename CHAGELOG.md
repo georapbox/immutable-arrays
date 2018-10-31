@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.0.3
+
+- Fixes issue #4. Do not copy array unnecessarily in `del` method if index is a negative number.
+
 ## v1.0.2
 
 - Use the array spread operator in delete method.
