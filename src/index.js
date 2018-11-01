@@ -1,20 +1,20 @@
-import immutablePush from './immutable-push';
-import immutablePop from './immutable-pop';
-import immutableShift from './immutable-shift';
-import immutableUnshift from './immutable-unshift';
-import immutableSplice from './immutable-splice';
-import immutableReverse from './immutable-reverse';
-import immutableSort from './immutable-sort';
-import immutableDelete from './immutable-delete';
+import immutableDelete from './del';
+import immutablePop from './pop';
+import immutablePush from './push';
+import immutableReverse from './reverse';
+import immutableShift from './shift';
+import immutableSort from './sort';
+import immutableSplice from './splice';
+import immutableUnshift from './unshift';
 
-export const push = immutablePush;
-export const pop = immutablePop;
-export const shift = immutableShift;
-export const unshift = immutableUnshift;
-export const splice = immutableSplice;
-export const reverse = immutableReverse;
-export const sort = immutableSort;
 export const del = immutableDelete;
+export const pop = immutablePop;
+export const push = immutablePush;
+export const reverse = immutableReverse;
+export const shift = immutableShift;
+export const sort = immutableSort;
+export const splice = immutableSplice;
+export const unshift = immutableUnshift;
 
 export default {
   push: immutablePush,
