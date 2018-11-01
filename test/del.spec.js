@@ -1,4 +1,4 @@
-import {default as del} from '../src/immutable-delete';
+import del from '../src/del';
 import chai from 'chai';
 
 const expect = chai.expect;

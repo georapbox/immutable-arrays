@@ -1,4 +1,4 @@
-import {default as sort} from '../src/immutable-sort';
+import sort from '../src/sort';
 import chai from 'chai';
 
 const expect = chai.expect;
