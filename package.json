@@ -14,9 +14,11 @@
     "build:umdmin": "webpack --mode=production --output-library-target=umd",
     "build:umd": "webpack --mode=development --output-library-target=umd",
     "build:commonjs": "webpack --mode=development --output-library-target=commonjs2",
+    "build:commonjs-fn": "webpack --mode=development --output-library-target=commonjs2 --config=webpack.config.fn.js",
     "build": "npm-run-all build:*",
     "dev:umd": "webpack --progress --colors --watch --mode=development --output-library-target=umd",
     "dev:commonjs": "webpack --progress --colors --watch --mode=development --output-library-target=commonjs2",
+    "dev:commonjs-fn": "webpack --progress --colors --watch --mode=development --output-library-target=commonjs2 --config=webpack.config.fn.js",
     "dev": "npm-run-all --parallel dev:*",
     "prepublishOnly": "npm-run-all test build",
     "prepack": "npm-run-all test build"
