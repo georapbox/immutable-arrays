@@ -2,7 +2,7 @@
   "name": "immutable-arrays",
   "version": "2.0.0",
   "description": "Immutable versions of normally mutable array methods",
-  "main": "dist/commonjs/immutableArrays.js",
+  "main": "dist/commonjs/immutable-arrays.js",
   "files": [
     "src/",
     "dist/"
