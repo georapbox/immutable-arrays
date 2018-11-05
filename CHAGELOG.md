@@ -12,7 +12,7 @@
 ### OTHER CHANGES
 
 - All `devDependencies` are updated to latest versions. Updated Webpack to v4.x.x and Babel to v7.x.x.
-- The library is now exported in both UMD (as was in version 1.x.x) and CommonJS. For CommonJS, the libdary's methods are also exported as standalone functions in order to import only the ones you want for your project. Check the [Usage](https://github.com/georapbox/immutable-arrays/blob/master/README.md#usage) section in README for more details.
+- The library is now exported in both UMD (as was in version 1.x.x) and CommonJS. For CommonJS, the library's methods are also exported as standalone functions in order to import only the ones you want for your project. Check the [Usage](https://github.com/georapbox/immutable-arrays/blob/master/README.md#usage) section in README for more details.
 
 
 ## v1.0.3
