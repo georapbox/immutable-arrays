@@ -1,3 +1,8 @@
+/**
+ * Webpack configuration for exporting the library in UMD and CommonJS formats.
+ * UMD bundle is exported under `dist/umd/` directory while CommonJS bundle is exported under `dist/commonjs/` directory.
+ */
+
 const webpack = require('webpack');
 const mode = require('yargs').argv.mode;
 const libraryTarget = require('yargs').argv['output-library-target'];

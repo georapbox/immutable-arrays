@@ -1,3 +1,8 @@
+/**
+ * Webpack configuration for exporting the library's methods as standalone functions in CommonJS format.
+ * Al functions are exported under `dist/commonjs/` directory.
+ */
+
 const webpack = require('webpack');
 const pkg = require('./package.json');
 
