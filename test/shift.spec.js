@@ -1,4 +1,4 @@
-import {default as shift} from '../src/immutable-shift';
+import shift from '../src/shift';
 import chai from 'chai';
 
 const expect = chai.expect;

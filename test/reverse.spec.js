@@ -1,4 +1,4 @@
-import {default as reverse} from '../src/immutable-reverse';
+import reverse from '../src/reverse';
 import chai from 'chai';
 
 const expect = chai.expect;

@@ -7,11 +7,11 @@
  * @example
  *
  * const originalArray = ['a', 'b', 'c', 'd', 'e'];
- * const resultArray = immutableDelete(originalArray, 2);
+ * const resultArray = immutableArrays.del(originalArray, 2);
  * // -> originalArray ['a', 'b', 'c', 'd', 'e']
  * // -> resultArray ['a', 'b', 'd', 'e']
  *
- * const resultArray2 = immutableDelete(originalArray, -1);
+ * const resultArray2 = immutableArrays.del(originalArray, -1);
  * // -> originalArray ['a', 'b', 'c', 'd', 'e']
  * // -> resultArray2 ['a', 'b', 'c', 'd', 'e']
  */

@@ -1,4 +1,4 @@
-import {default as splice} from '../src/immutable-splice';
+import splice from '../src/splice';
 import chai from 'chai';
 
 const expect = chai.expect;

@@ -1,4 +1,4 @@
-import {default as unshift} from '../src/immutable-unshift';
+import unshift from '../src/unshift';
 import chai from 'chai';
 
 const expect = chai.expect;

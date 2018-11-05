@@ -17,7 +17,7 @@ ratings:
   paths:
   - src/**
 exclude_paths:
-- lib/**/*
+- dist/**/*
 - test/**/*
 - coverage/**/*
 - .nyc_output/**/*

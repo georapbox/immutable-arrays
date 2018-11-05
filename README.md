@@ -21,14 +21,27 @@ $ npm install --save immutable-arrays
 
 ## Usage
 
+The library is exported in `UMD` and `CommonJS` formats under `dist/umd` and `dist/commonjs` directories respectively.
+It can be used both in Browser and Node environments.  
+In Node environment or if you use a bundler (eg Webpack), the library also exports all of its methods as CommonJS standalone functions under the `dist/commonjs` directory.
+
 ### Old school browser global
 ```html
-<script src="immutable-arrays/lib/immutableArrays.min.js"></script>
+<script src="immutable-arrays/dist/umd/immutable-arrays.min.js"></script>
 ```
 
 ### Node.js
+
+#### Import the whole library
+
 ```js
 const immutableArrays = require('immutable-arrays');
+```
+
+#### Import only the module you need <sup>New in version 2.x.x</sup>
+
+```js
+const push = require('immutable-arrays/dist/commonjs/push').default;
 ```
 
 ### ES2015 imports
@@ -39,22 +52,22 @@ const immutableArrays = require('immutable-arrays');
 import immutableArrays from 'immutable-arrays';
 ```
 
-#### Import a single export
+#### Import a named export (bundlers like Webpack will still include the whole library)
 
 ```js
-import {push} from 'immutable-arrays';
+import { push } from 'immutable-arrays';
 ```
 
-#### Import multiple exports
+#### Import only the module you need <sup>New in version 2.x.x</sup>
 
 ```js
-import {push, pop, shift} from 'immutable-arrays';
+import push from 'immutable-arrays/dist/commonjs/push';
 ```
 
-#### Import ES2015 (uncompiled) method from source
+#### Import ES2015 (uncompiled) function from source
 
 ```js
-import push from 'immutable-arrays/src/immutable-push';
+import push from 'immutable-arrays/src/push';
 ```
 
 ## API
@@ -258,18 +271,32 @@ const resultArray = immutableArrays.del(originalArray, 2);
 // -> originalArray ['a', 'b', 'c', 'd', 'e']
 // -> resultArray ['a', 'b', 'd', 'e']
 
-const resultArray2 = immutableDelete(originalArray, -1);
+const resultArray2 = immutableArrays.del(originalArray, -1);
 // -> originalArray ['a', 'b', 'c', 'd', 'e']
 // -> resultArray2 ['a', 'b', 'c', 'd', 'e']
 ```
 
-## Test
+## For developers
+
+### Build the library
 
 ```sh
-$ npm test
+$ npm run dev
+```
+Builds the library and watches for changes while developing. If you want to build only for a specific format, there are other npm scripts available; check in `package.json`.
+
+```sh
+$ npm run build
+```
+Builds the library for production.
+
+### Run the tests
+
+```sh
+$ npm run test
 ```
 
-## Test Coverage
+### Tests coverage
 
 ```sh
 $ npm run coverage
