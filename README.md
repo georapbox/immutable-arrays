@@ -38,7 +38,7 @@ In Node environment or if you use a bundler (eg Webpack), the library also expor
 const immutableArrays = require('immutable-arrays');
 ```
 
-#### Import only the module you need
+#### Import only the module you need <sup>New in version 2.x.x</sup>
 
 ```js
 const push = require('immutable-arrays/dist/commonjs/push').default;
@@ -58,7 +58,7 @@ import immutableArrays from 'immutable-arrays';
 import { push } from 'immutable-arrays';
 ```
 
-#### Import only the module you need
+#### Import only the module you need <sup>New in version 2.x.x</sup>
 
 ```js
 import push from 'immutable-arrays/dist/commonjs/push';
@@ -276,13 +276,27 @@ const resultArray2 = immutableArrays.del(originalArray, -1);
 // -> resultArray2 ['a', 'b', 'c', 'd', 'e']
 ```
 
-## Test
+## For developers
+
+### Build the library
 
 ```sh
-$ npm test
+$ npm run dev
+```
+Builds the library and watches for changes while developing. If you want to build only for a specific format, there are other npm scripts available; check in `package.json`.
+
+```sh
+$ npm run build
+```
+Builds the library for production.
+
+### Run the tests
+
+```sh
+$ npm run test
 ```
 
-## Test Coverage
+### Tests coverage
 
 ```sh
 $ npm run coverage
