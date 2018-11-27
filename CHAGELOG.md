@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v2.0.1
+
+- Update `devDependencies`
+- Update `npm-run-all` to latest version to protect against `flatmap-stream` malicious dependency (https://github.com/mysticatea/npm-run-all/issues/153)
+
 ## v2.0.0
 
 ### BREAKING CHANGES
