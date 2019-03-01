@@ -2,7 +2,7 @@
  * Deletes an element from an array by its index in the array.
  *
  * @param {Array} array The original array.
- * @param {Number} index The index of the element to delete in the original array. If index is a negative number, the original array is returned.
+ * @param {Number} index The index of the element to delete in the original array. If index is a negative number, a copy of the original array is returned.
  * @return {Array} A new array with the element removed.
  * @example
  *
@@ -16,5 +16,5 @@
  * // -> resultArray2 ['a', 'b', 'c', 'd', 'e']
  */
 export default function immutableDelete(array, index) {
-  return index >= 0 ? [...array.slice(0, index), ...array.slice(index + 1)] : array;
+  return index >= 0 ? [...array.slice(0, index), ...array.slice(index + 1)] : [...array];
 }

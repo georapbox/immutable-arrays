@@ -262,7 +262,7 @@ Deletes an element from an array by its index in the array.
 | Param | Type | Description |
 | --- | --- | --- |
 | array | <code>Array</code> | The original array. |
-| index | <code>Number</code> | The index of the element to delete in the original array. If index is a negative number, the original array is returned. |
+| index | <code>Number</code> | The index of the element to delete in the original array. If index is a negative number, a copy of the original array is returned. |
 
 **Example**  
 ```js
