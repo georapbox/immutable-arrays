@@ -1,5 +1,7 @@
 # CHANGELOG
 
+## v3.0.0
+
 ## v2.0.2
 - In `del` method if index is a negative number, return a copy of the original array. By just returning the original array (as of version 1.0.3) is dangerous for mutating the resulted array if the original is mutated.
 

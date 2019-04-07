@@ -1,6 +1,8 @@
 language: node_js
 node_js:
-  - 8.11.1
+  - '11'
+  - '10'
+  - '8'
 branches:
   only:
     - master
@@ -9,5 +11,5 @@ before_install:
 install:
   - npm install
 script:
-  - npm run coverage
+  - npm run clean && npm run lint && npm test && npm run build
   - codecov

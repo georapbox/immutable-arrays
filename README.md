@@ -11,7 +11,7 @@ Immutable versions of normally mutable array methods
 [![Issue Count](https://codeclimate.com/github/georapbox/immutable-arrays/badges/issue_count.svg)](https://codeclimate.com/github/georapbox/immutable-arrays)
 [![Codecov](https://img.shields.io/codecov/c/github/georapbox/immutable-arrays/master.svg)](https://codecov.io/gh/georapbox/immutable-arrays)
 [![Dependencies](https://david-dm.org/georapbox/immutable-arrays.svg)](https://david-dm.org/georapbox/immutable-arrays)
-[![devDependency Status](https://david-dm.org/georapbox/immutable-arrays/dev-status.svg)](https://david-dm.org/georapbox/immutable-arrays#info=devDependencies)
+[![devDependency Status](https://david-dm.org/georapbox/immutable-arrays/dev-status.svg)](https://david-dm.org/georapbox/immutable-arrays?type=dev)
 
 ## Install
 
@@ -21,27 +21,20 @@ $ npm install --save immutable-arrays
 
 ## Usage
 
-The library is exported in `UMD` and `CommonJS` formats under `dist/umd` and `dist/commonjs` directories respectively.
-It can be used both in Browser and Node environments.  
-In Node environment or if you use a bundler (eg Webpack), the library also exports all of its methods as CommonJS standalone functions under the `dist/commonjs` directory.
+The library is exported in the following formats:
+- `UMD (Universal Module Definition)` for usage in browsers
+- `CJS (CommonJS)` for usage in Node.js
+- `ESM (Ecmascript Modules)` for usage in browsers or environments that support ESM
 
 ### Old school browser global
 ```html
-<script src="immutable-arrays/dist/umd/immutable-arrays.min.js"></script>
+<script src="immutable-arrays/dist/immutable-arrays.umd.min.js"></script>
 ```
 
 ### Node.js
 
-#### Import the whole library
-
 ```js
 const immutableArrays = require('immutable-arrays');
-```
-
-#### Import only the module you need <sup>New in version 2.x.x</sup>
-
-```js
-const push = require('immutable-arrays/dist/commonjs/push').default;
 ```
 
 ### ES2015 imports
@@ -52,22 +45,10 @@ const push = require('immutable-arrays/dist/commonjs/push').default;
 import immutableArrays from 'immutable-arrays';
 ```
 
-#### Import a named export (bundlers like Webpack will still include the whole library)
+#### Import a named export
 
 ```js
 import { push } from 'immutable-arrays';
-```
-
-#### Import only the module you need <sup>New in version 2.x.x</sup>
-
-```js
-import push from 'immutable-arrays/dist/commonjs/push';
-```
-
-#### Import ES2015 (uncompiled) function from source
-
-```js
-import push from 'immutable-arrays/src/push';
 ```
 
 ## API
