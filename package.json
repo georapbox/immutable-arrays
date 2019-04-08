@@ -1,27 +1,22 @@
 {
   "name": "immutable-arrays",
-  "version": "2.0.2",
+  "version": "3.0.0",
   "description": "Immutable versions of normally mutable array methods",
-  "main": "dist/commonjs/immutable-arrays.js",
+  "main": "dist/immutable-arrays.cjs.js",
+  "module": "dist/immutable-arrays.esm.js",
+  "browser": "dist/immutable-arrays.umd.js",
   "files": [
     "src/",
     "dist/"
   ],
   "scripts": {
+    "build": "rollup -c --environment BUILD:production",
+    "dev": "rollup -c -w",
+    "lint": "eslint src/**/*.js",
     "test": "cross-env NODE_ENV=test mocha --require @babel/register --colors ./test/*.spec.js",
     "coverage": "nyc --reporter=text --reporter=lcov npm test",
-    "lint": "eslint src/**/*.js",
-    "build:umdmin": "webpack --mode=production --output-library-target=umd",
-    "build:umd": "webpack --mode=development --output-library-target=umd",
-    "build:commonjs": "webpack --mode=development --output-library-target=commonjs2",
-    "build:commonjs-fn": "webpack --mode=development --output-library-target=commonjs2 --config=webpack.config.commonjs.standalone.js",
-    "build": "npm-run-all build:*",
-    "dev:umd": "webpack --progress --colors --watch --mode=development --output-library-target=umd",
-    "dev:commonjs": "webpack --progress --colors --watch --mode=development --output-library-target=commonjs2",
-    "dev:commonjs-fn": "webpack --progress --colors --watch --mode=development --output-library-target=commonjs2 --config=webpack.config.commonjs.standalone.js",
-    "dev": "npm-run-all --parallel dev:*",
-    "prepublishOnly": "npm-run-all test build",
-    "prepack": "npm-run-all test build"
+    "clean": "rimraf dist coverage",
+    "prepare": "npm run clean && npm run lint && npm test && npm run build"
   },
   "repository": {
     "type": "git",
@@ -46,19 +41,29 @@
   "author": "George Raptis <georapbox@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "~7.1.2",
-    "@babel/preset-env": "~7.1.0",
-    "@babel/register": "~7.0.0",
-    "babel-loader": "~8.0.4",
+    "@babel/core": "~7.4.3",
+    "@babel/plugin-proposal-object-rest-spread": "~7.4.3",
+    "@babel/preset-env": "~7.4.3",
+    "@babel/register": "~7.4.0",
     "chai": "~4.2.0",
     "cross-env": "~5.2.0",
-    "eslint": "~5.7.0",
-    "eslint-loader": "~2.1.1",
-    "mocha": "~5.2.0",
-    "npm-run-all": "~4.1.5",
-    "nyc": "~13.1.0",
-    "webpack": "~4.26.1",
-    "webpack-cli": "~3.1.2",
-    "yargs": "~12.0.2"
+    "eslint": "~5.16.0",
+    "mocha": "~6.1.0",
+    "nyc": "~13.3.0",
+    "rimraf": "~2.6.3",
+    "rollup": "~1.9.0",
+    "rollup-plugin-babel": "~4.3.2",
+    "rollup-plugin-terser": "~4.0.4",
+    "sinon": "~7.3.1",
+    "sinon-chai": "~3.3.0"
+  },
+  "browserslist": "> 0.5%, last 2 versions, Firefox ESR, not dead",
+  "nyc": {
+    "exclude": [
+      "**/*.spec.js",
+      ".babelrc.js",
+      "rollup.config.js",
+      "dist"
+    ]
   }
 }

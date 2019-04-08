@@ -1,6 +1,12 @@
 # CHANGELOG
 
+## v3.0.0
+
+- Replaced Webpack with Rollup for bundling the library. As a result of this migration the library is now exported in `UMD`, `CommonJS` and `ESM` formats.
+- The library does not export standalone modules. If you need to import only one method you can import a named export.
+
 ## v2.0.2
+
 - In `del` method if index is a negative number, return a copy of the original array. By just returning the original array (as of version 1.0.3) is dangerous for mutating the resulted array if the original is mutated.
 
 ## v2.0.1
