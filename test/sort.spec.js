@@ -26,9 +26,4 @@ describe('immutable-sort', () => {
     const resultArray = sort(stringArray);
     expect(resultArray).to.eql(['Beluga', 'Blue', 'Humpback']);
   });
-
-  it('sorts string array (with compareFunction) (descending)', () => {
-    const resultArray = sort(stringArray, (a, b) => a.toLowerCase() < b.toLowerCase());
-    expect(resultArray).to.eql(['Humpback', 'Blue', 'Beluga']);
-  });
 });
