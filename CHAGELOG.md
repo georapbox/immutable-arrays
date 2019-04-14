@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v3.0.1
+
+- Fixes issue #8
+
 ## v3.0.0
 
 - Replaced Webpack with Rollup for bundling the library. As a result of this migration the library is now exported in `UMD`, `CommonJS` and `ESM` formats.

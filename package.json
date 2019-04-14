@@ -1,10 +1,10 @@
 {
   "name": "immutable-arrays",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Immutable versions of normally mutable array methods",
   "main": "dist/immutable-arrays.cjs.js",
   "module": "dist/immutable-arrays.esm.js",
-  "browser": "dist/immutable-arrays.umd.js",
+  "unpkg": "dist/immutable-arrays.umd.min.js",
   "files": [
     "src/",
     "dist/"
