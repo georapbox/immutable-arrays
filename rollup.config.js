@@ -23,7 +23,7 @@ export default commandLineArgs => {
       output: {
         banner,
         name: libraryName,
-        file: pkg.browser,
+        file: `dist/${pkg.name}.umd.js`,
         format: 'umd'
       },
       plugins: [
