@@ -1,5 +1,26 @@
 # CHANGELOG
 
+## v4.0.0
+
+### BREAKING CHANGES
+
+Remove default export in favor of named exports.
+
+The following is **NOT** working aymore:
+```js
+import immutableArrays from 'immutable-arrays';
+```
+
+Import the method you want to use instead:
+```js
+import { push } from 'immutable-arrays';
+```
+
+### OTHER CHANGES
+
+- Fix missing build file path for UMD bundling in rollup configuration file
+- Update `devDependencies`
+
 ## v3.0.1
 
 - Fixes issue #8

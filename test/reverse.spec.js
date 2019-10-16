@@ -1,4 +1,4 @@
-import reverse from '../src/reverse';
+import { reverse } from '../src/reverse';
 import chai from 'chai';
 
 const expect = chai.expect;

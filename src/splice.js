@@ -21,51 +21,51 @@
  * @example
  *
  * const originalArray = ['a', 'b', 'c', 'd', 'e'];
- * const resultArray = immutableSplice(originalArray, 0);
+ * const resultArray = splice(originalArray, 0);
  * // -> originalArray ['a', 'b', 'c', 'd', 'e']
  * // -> resultArray []
  *
  * const originalArray = ['a', 'b', 'c', 'd', 'e'];
- * const resultArray = immutableSplice(originalArray, 0, 1);
+ * const resultArray = splice(originalArray, 0, 1);
  * // -> originalArray ['a', 'b', 'c', 'd', 'e']
  * // -> resultArray ['b', 'c', 'd', 'e']
  *
  * const originalArray = ['a', 'b', 'c', 'd', 'e'];
- * const resultArray = immutableSplice(originalArray, 0, 3);
+ * const resultArray = splice(originalArray, 0, 3);
  * // -> originalArray ['a', 'b', 'c', 'd', 'e']
  * // -> resultArray ['d', 'e']
  *
  * const originalArray = ['a', 'b', 'c', 'd', 'e'];
- * const resultArray = immutableSplice(originalArray, 0, originalArray.length);
+ * const resultArray = splice(originalArray, 0, originalArray.length);
  * // -> originalArray ['a', 'b', 'c', 'd', 'e']
  * // -> resultArray []
  *
  * const originalArray = ['a', 'b', 'c', 'd', 'e'];
- * const resultArray = immutableSplice(originalArray, 0, -3);
+ * const resultArray = splice(originalArray, 0, -3);
  * // -> originalArray ['a', 'b', 'c', 'd', 'e']
  * // -> resultArray ['a', 'b', 'c', 'd', 'e']
  *
  * const originalArray = ['a', 'b', 'c', 'd', 'e'];
- * const resultArray = immutableSplice(originalArray, 0, 0, 'lorem', 'ipsum');
+ * const resultArray = splice(originalArray, 0, 0, 'lorem', 'ipsum');
  * // -> originalArray ['a', 'b', 'c', 'd', 'e']
  * // -> resultArray ['lorem', 'ipsum', 'a', 'b', 'c', 'd', 'e']
  *
  * const originalArray = ['a', 'b', 'c', 'd', 'e'];
- * const resultArray = immutableSplice(originalArray, originalArray.length, 0, 'lorem', 'ipsum');
+ * const resultArray = splice(originalArray, originalArray.length, 0, 'lorem', 'ipsum');
  * // -> originalArray ['a', 'b', 'c', 'd', 'e']
  * // -> resultArray ['a', 'b', 'c', 'd', 'e', 'lorem', 'ipsum']
  *
  * const originalArray = ['a', 'b', 'c', 'd', 'e'];
- * const resultArray = immutableSplice(originalArray, 0, 2, 'lorem', 'ipsum');
+ * const resultArray = splice(originalArray, 0, 2, 'lorem', 'ipsum');
  * // -> originalArray ['a', 'b', 'c', 'd', 'e']
  * // -> resultArray ['lorem', 'ipsum', 'c', 'd', 'e']
  *
  * const originalArray = ['a', 'b', 'c', 'd', 'e'];
- * const resultArray = immutableSplice(originalArray, originalArray.length - 2, 2, 'lorem', 'ipsum');
+ * const resultArray = splice(originalArray, originalArray.length - 2, 2, 'lorem', 'ipsum');
  * // -> originalArray ['a', 'b', 'c', 'd', 'e']
  * // -> resultArray ['a', 'b', 'c', 'lorem', 'ipsum']
  */
-export default function immutableSplice(array, start = array.length, deleteCount = array.length - start, ...elementN) {
+export function splice(array, start = array.length, deleteCount = array.length - start, ...elementN) {
   return [
     ...array.slice(0, start),
     ...elementN,

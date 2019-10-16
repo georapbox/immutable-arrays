@@ -31,21 +31,17 @@ The library is exported in the following formats:
 <script src="immutable-arrays/dist/immutable-arrays.umd.min.js"></script>
 ```
 
+```js
+const push = immutableArrays.push;
+```
+
 ### Node.js
 
 ```js
-const immutableArrays = require('immutable-arrays');
+const push = require('immutable-arrays').push;
 ```
 
 ### ES2015 imports
-
-#### Import default export
-
-```js
-import immutableArrays from 'immutable-arrays';
-```
-
-#### Import a named export
 
 ```js
 import { push } from 'immutable-arrays';
@@ -53,7 +49,7 @@ import { push } from 'immutable-arrays';
 
 ## API
 
-### immutableArrays.push(array, ...elementN) ⇒ <code>Array</code>
+### push(array, ...elementN) ⇒ <code>Array</code>
 Adds one or more elements to the end of an array by returning
 a new array instead of mutating the original one.
 
@@ -67,12 +63,12 @@ a new array instead of mutating the original one.
 **Example**  
 ```js
 const originalArray = ['a', 'b', 'c', 'd', 'e'];
-const resultArray = immutableArrays.push(originalArray, 'f', 'g');
+const resultArray = push(originalArray, 'f', 'g');
 // -> originalArray ['a', 'b', 'c', 'd', 'e']
 // -> resultArray ['a', 'b', 'c', 'd', 'e', 'f', 'g']
 ```
 
-### immutableArrays.pop(array) ⇒ <code>Array</code>
+### pop(array) ⇒ <code>Array</code>
 Removes the last element from an array by returning
 a new array instead of mutating the original one.
 
@@ -85,12 +81,12 @@ a new array instead of mutating the original one.
 **Example**  
 ```js
 const originalArray = ['a', 'b', 'c', 'd', 'e'];
-const resultArray = immutableArrays.pop(originalArray);
+const resultArray = pop(originalArray);
 // -> originalArray ['a', 'b', 'c', 'd', 'e']
 // -> resultArray ['a', 'b', 'c', 'd']
 ```
 
-### immutableArrays.shift(array) ⇒ <code>Array</code>
+### shift(array) ⇒ <code>Array</code>
 Removes the first element from an array.
 
 **Returns**: <code>Array</code> - A new array with the first element removed.  
@@ -102,12 +98,12 @@ Removes the first element from an array.
 **Example**  
 ```js
 const originalArray = ['a', 'b', 'c', 'd', 'e'];
-const resultArray = immutableArrays.shift(originalArray);
+const resultArray = shift(originalArray);
 // -> originalArray ['a', 'b', 'c', 'd', 'e']
 // -> resultArray ['b', 'c', 'd', 'e']
 ```
 
-### immutableArrays.unshift(array, ...elementN) ⇒ <code>Array</code>
+### unshift(array, ...elementN) ⇒ <code>Array</code>
 Adds one or more elements to the beginning of an array.
 
 **Returns**: <code>Array</code> - A new array with the new elements added to the front.  
@@ -120,12 +116,12 @@ Adds one or more elements to the beginning of an array.
 **Example**  
 ```js
 const originalArray = ['a', 'b', 'c', 'd', 'e'];
-const resultArray = immutableArrays.unshift(originalArray, 'f', 'g');
+const resultArray = unshift(originalArray, 'f', 'g');
 // -> originalArray ['a', 'b', 'c', 'd', 'e']
 // -> resultArray ['f', 'g', 'a', 'b', 'c', 'd', 'e']
 ```
 
-### immutableArrays.reverse(array) ⇒ <code>Array</code>
+### reverse(array) ⇒ <code>Array</code>
 Reverses an array (not in place).
 The first array element becomes the last, and the last array element becomes the first.
 
@@ -138,12 +134,12 @@ The first array element becomes the last, and the last array element becomes the
 **Example**  
 ```js
 const originalArray = ['a', 'b', 'c', 'd', 'e'];
-const resultArray = immutableArrays.reverse(originalArray);
+const resultArray = reverse(originalArray);
 // -> originalArray ['a', 'b', 'c', 'd', 'e']
 // -> resultArray ['e', 'd', 'c', 'b', 'a']
 ```
 
-### immutableArrays.sort(array, [compareFunction]) ⇒ <code>Array</code>
+### sort(array, [compareFunction]) ⇒ <code>Array</code>
 Sorts the elements of an array (not in place) and returns a sorted array.
 
 **Returns**: <code>Array</code> - A new sorted array.
@@ -158,24 +154,24 @@ Sorts the elements of an array (not in place) and returns a sorted array.
 const numberArray = [20, 3, 4, 10, -3, 1, 0, 5];
 const stringArray = ['Blue', 'Humpback', 'Beluga'];
 
-const resultArray = immutableArrays.sort(numberArray, (a, b) => a - b);
+const resultArray = sort(numberArray, (a, b) => a - b);
 // -> numberArray [20, 3, 4, 10, -3, 1, 0, 5]
 // -> resultArray [-3, 0, 1, 3, 4, 5, 10, 20]
 
-const resultArray = immutableArrays.sort(numberArray, (a, b) => b - a);
+const resultArray = sort(numberArray, (a, b) => b - a);
 // -> numberArray [20, 3, 4, 10, -3, 1, 0, 5]
 // -> resultArray [20, 10, 5, 4, 3, 1, 0, -3]
 
-const resultArray = immutableArrays.sort(stringArray);
+const resultArray = sort(stringArray);
 // -> stringArray ['Blue', 'Humpback', 'Beluga']
 // -> resultArray ['Beluga', 'Blue', 'Humpback']
 
-const resultArray = immutableArrays.sort(stringArray, (a, b) => a.toLowerCase() < b.toLowerCase());
+const resultArray = sort(stringArray, (a, b) => a.toLowerCase() < b.toLowerCase());
 // -> stringArray ['Blue', 'Humpback', 'Beluga']
 // -> resultArray ['Humpback', 'Blue', 'Beluga']
 ```
 
-### immutableArrays.splice(array, [start], [deleteCount], [...elementN]) ⇒ <code>Array</code>
+### splice(array, [start], [deleteCount], [...elementN]) ⇒ <code>Array</code>
 Removes existing elements and/or adds new elements to an array.
 
 **Returns**: <code>Array</code> - The result array.  
@@ -190,52 +186,52 @@ Removes existing elements and/or adds new elements to an array.
 **Example**  
 ```js
 const originalArray = ['a', 'b', 'c', 'd', 'e'];
-const resultArray = immutableArrays.splice(originalArray, 0);
+const resultArray = splice(originalArray, 0);
 // -> originalArray ['a', 'b', 'c', 'd', 'e']
 // -> resultArray []
 
 const originalArray = ['a', 'b', 'c', 'd', 'e'];
-const resultArray = immutableArrays.splice(originalArray, 0, 1);
+const resultArray = splice(originalArray, 0, 1);
 // -> originalArray ['a', 'b', 'c', 'd', 'e']
 // -> resultArray ['b', 'c', 'd', 'e']
 
 const originalArray = ['a', 'b', 'c', 'd', 'e'];
-const resultArray = immutableArrays.splice(originalArray, 0, 3);
+const resultArray = splice(originalArray, 0, 3);
 // -> originalArray ['a', 'b', 'c', 'd', 'e']
 // -> resultArray ['d', 'e']
 
 const originalArray = ['a', 'b', 'c', 'd', 'e'];
-const resultArray = immutableArrays.splice(originalArray, 0, originalArray.length);
+const resultArray = splice(originalArray, 0, originalArray.length);
 // -> originalArray ['a', 'b', 'c', 'd', 'e']
 // -> resultArray []
 
 const originalArray = ['a', 'b', 'c', 'd', 'e'];
-const resultArray = immutableArrays.splice(originalArray, 0, -3);
+const resultArray = splice(originalArray, 0, -3);
 // -> originalArray ['a', 'b', 'c', 'd', 'e']
 // -> resultArray ['a', 'b', 'c', 'd', 'e']
 
 const originalArray = ['a', 'b', 'c', 'd', 'e'];
-const resultArray = immutableArrays.splice(originalArray, 0, 0, 'lorem', 'ipsum');
+const resultArray = splice(originalArray, 0, 0, 'lorem', 'ipsum');
 // -> originalArray ['a', 'b', 'c', 'd', 'e']
 // -> resultArray ['lorem', 'ipsum', 'a', 'b', 'c', 'd', 'e']
 
 const originalArray = ['a', 'b', 'c', 'd', 'e'];
-const resultArray = immutableArrays.splice(originalArray, originalArray.length, 0, 'lorem', 'ipsum');
+const resultArray = splice(originalArray, originalArray.length, 0, 'lorem', 'ipsum');
 // -> originalArray ['a', 'b', 'c', 'd', 'e']
 // -> resultArray ['a', 'b', 'c', 'd', 'e', 'lorem', 'ipsum']
 
 const originalArray = ['a', 'b', 'c', 'd', 'e'];
-const resultArray = immutableArrays.splice(originalArray, 0, 2, 'lorem', 'ipsum');
+const resultArray = splice(originalArray, 0, 2, 'lorem', 'ipsum');
 // -> originalArray ['a', 'b', 'c', 'd', 'e']
 // -> resultArray ['lorem', 'ipsum', 'c', 'd', 'e']
 
 const originalArray = ['a', 'b', 'c', 'd', 'e'];
-const resultArray = immutableArrays.splice(originalArray, originalArray.length - 2, 2, 'lorem', 'ipsum');
+const resultArray = splice(originalArray, originalArray.length - 2, 2, 'lorem', 'ipsum');
 // -> originalArray ['a', 'b', 'c', 'd', 'e']
 // -> resultArray ['a', 'b', 'c', 'lorem', 'ipsum']
 ```
 
-### immutableArrays.del(array, index) ⇒ <code>Array</code>
+### del(array, index) ⇒ <code>Array</code>
 Deletes an element from an array by its index in the array.
 
 **Returns**: <code>Array</code> - A new array with the element removed.  
@@ -248,11 +244,11 @@ Deletes an element from an array by its index in the array.
 **Example**  
 ```js
 const originalArray = ['a', 'b', 'c', 'd', 'e'];
-const resultArray = immutableArrays.del(originalArray, 2);
+const resultArray = del(originalArray, 2);
 // -> originalArray ['a', 'b', 'c', 'd', 'e']
 // -> resultArray ['a', 'b', 'd', 'e']
 
-const resultArray2 = immutableArrays.del(originalArray, -1);
+const resultArray2 = del(originalArray, -1);
 // -> originalArray ['a', 'b', 'c', 'd', 'e']
 // -> resultArray2 ['a', 'b', 'c', 'd', 'e']
 ```

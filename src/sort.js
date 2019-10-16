@@ -10,22 +10,22 @@
  * const numberArray = [20, 3, 4, 10, -3, 1, 0, 5];
  * const stringArray = ['Blue', 'Humpback', 'Beluga'];
  *
- * const resultArray = immutableSort(numberArray, (a, b) => a - b);
+ * const resultArray = sort(numberArray, (a, b) => a - b);
  * // -> numberArray [20, 3, 4, 10, -3, 1, 0, 5]
  * // -> resultArray [-3, 0, 1, 3, 4, 5, 10, 20]
  *
- * const resultArray = immutableSort(numberArray, (a, b) => b - a);
+ * const resultArray = sort(numberArray, (a, b) => b - a);
  * // -> numberArray [20, 3, 4, 10, -3, 1, 0, 5]
  * // -> resultArray [20, 10, 5, 4, 3, 1, 0, -3]
  *
- * const resultArray = immutableSort(stringArray);
+ * const resultArray = sort(stringArray);
  * // -> stringArray ['Blue', 'Humpback', 'Beluga']
  * // -> resultArray ['Beluga', 'Blue', 'Humpback']
  *
- * const resultArray = immutableSort(stringArray, (a, b) => a.toLowerCase() < b.toLowerCase());
+ * const resultArray = sort(stringArray, (a, b) => a.toLowerCase() < b.toLowerCase());
  * // -> stringArray ['Blue', 'Humpback', 'Beluga']
  * // -> resultArray ['Humpback', 'Blue', 'Beluga']
  */
-export default function immutableSort(array, compareFunction) {
+export function sort(array, compareFunction) {
   return [...array].sort(compareFunction);
 }

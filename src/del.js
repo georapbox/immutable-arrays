@@ -7,14 +7,14 @@
  * @example
  *
  * const originalArray = ['a', 'b', 'c', 'd', 'e'];
- * const resultArray = immutableArrays.del(originalArray, 2);
+ * const resultArray = del(originalArray, 2);
  * // -> originalArray ['a', 'b', 'c', 'd', 'e']
  * // -> resultArray ['a', 'b', 'd', 'e']
  *
- * const resultArray2 = immutableArrays.del(originalArray, -1);
+ * const resultArray2 = del(originalArray, -1);
  * // -> originalArray ['a', 'b', 'c', 'd', 'e']
  * // -> resultArray2 ['a', 'b', 'c', 'd', 'e']
  */
-export default function immutableDelete(array, index) {
+export function del(array, index) {
   return index >= 0 ? [...array.slice(0, index), ...array.slice(index + 1)] : [...array];
 }

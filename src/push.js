@@ -8,10 +8,10 @@
  * @example
  *
  * const originalArray = ['a', 'b', 'c', 'd', 'e'];
- * const resultArray = immutablePush(originalArray, 'f', 'g');
+ * const resultArray = push(originalArray, 'f', 'g');
  * // -> originalArray ['a', 'b', 'c', 'd', 'e']
  * // -> resultArray ['a', 'b', 'c', 'd', 'e', 'f', 'g']
  */
-export default function immutablePush(array, ...elementN) {
+export function push(array, ...elementN) {
   return [...array, ...elementN];
 }

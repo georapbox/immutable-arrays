@@ -1,4 +1,4 @@
-import splice from '../src/splice';
+import { splice } from '../src/splice';
 import chai from 'chai';
 
 const expect = chai.expect;
