@@ -280,7 +280,7 @@ $ npm run coverage
 
 ## Changelog
 
-For API updates and breaking changes, check the [CHANGELOG](https://github.com/georapbox/immutable-arrays/blob/master/CHAGELOG.md).
+For API updates and breaking changes, check the [CHANGELOG](https://github.com/georapbox/immutable-arrays/blob/master/CHANGELOG.md).
 
 ## License
 
