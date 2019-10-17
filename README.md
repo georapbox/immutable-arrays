@@ -27,13 +27,12 @@ The library is exported in the following formats:
 - `ESM (Ecmascript Modules)` for usage in browsers or environments that support ESM
 
 ### Old school browser global
+
 ```html
-<script src="immutable-arrays/dist/immutable-arrays.umd.min.js"></script>
+<script src="https://unpkg.com/immutable-arrays@<VERSION_GOES_HERE>/dist/immutable-arrays.umd.min.js"></script>
 ```
 
-```js
-const push = immutableArrays.push;
-```
+After importing the library it can be accessed via the global variable `immutableArrays`.
 
 ### Node.js
 
@@ -278,6 +277,10 @@ $ npm run test
 ```sh
 $ npm run coverage
 ```
+
+## Changelog
+
+For API updates and breaking changes, check the [CHANGELOG](https://github.com/georapbox/immutable-arrays/blob/master/CHAGELOG.md).
 
 ## License
 
