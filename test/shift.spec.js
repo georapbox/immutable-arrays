@@ -1,4 +1,4 @@
-import shift from '../src/shift';
+import { shift } from '../src/shift';
 import chai from 'chai';
 
 const expect = chai.expect;

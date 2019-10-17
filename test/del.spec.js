@@ -1,4 +1,4 @@
-import del from '../src/del';
+import { del } from '../src/del';
 import chai from 'chai';
 
 const expect = chai.expect;

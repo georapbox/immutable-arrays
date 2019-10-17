@@ -1,4 +1,4 @@
-import push from '../src/push';
+import { push } from '../src/push';
 import chai from 'chai';
 
 const expect = chai.expect;

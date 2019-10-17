@@ -6,10 +6,10 @@
  * @example
  *
  * const originalArray = ['a', 'b', 'c', 'd', 'e'];
- * const resultArray = immutableShift(originalArray);
+ * const resultArray = shift(originalArray);
  * // -> originalArray ['a', 'b', 'c', 'd', 'e']
  * // -> resultArray ['b', 'c', 'd', 'e']
  */
-export default function immutableShift(array) {
+export function shift(array) {
   return array.slice(1);
 }

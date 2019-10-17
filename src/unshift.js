@@ -7,10 +7,10 @@
  * @example
  *
  * const originalArray = ['a', 'b', 'c', 'd', 'e'];
- * const resultArray = immutableUnshift(originalArray, 'f', 'g');
+ * const resultArray = unshift(originalArray, 'f', 'g');
  * // -> originalArray ['a', 'b', 'c', 'd', 'e']
  * // -> resultArray ['f', 'g', 'a', 'b', 'c', 'd', 'e']
  */
-export default function immutableUnshift(array, ...elementN) {
+export function unshift(array, ...elementN) {
   return [...elementN, ...array];
 }

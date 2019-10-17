@@ -1,4 +1,4 @@
-import pop from '../src/pop';
+import { pop } from '../src/pop';
 import chai from 'chai';
 
 const expect = chai.expect;

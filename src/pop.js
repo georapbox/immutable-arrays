@@ -7,10 +7,10 @@
  * @example
  *
  * const originalArray = ['a', 'b', 'c', 'd', 'e'];
- * const resultArray = immutablePop(originalArray);
+ * const resultArray = pop(originalArray);
  * // -> originalArray ['a', 'b', 'c', 'd', 'e']
  * // -> resultArray ['a', 'b', 'c', 'd']
  */
-export default function immutablePop(array) {
+export function pop(array) {
   return array.slice(0, -1);
 }

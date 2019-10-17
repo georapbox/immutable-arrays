@@ -1,4 +1,4 @@
-import unshift from '../src/unshift';
+import { unshift } from '../src/unshift';
 import chai from 'chai';
 
 const expect = chai.expect;

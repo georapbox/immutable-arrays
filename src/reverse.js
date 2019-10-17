@@ -7,10 +7,10 @@
  * @example
  *
  * const originalArray = ['a', 'b', 'c', 'd', 'e'];
- * const resultArray = immutableReverse(originalArray);
+ * const resultArray = reverse(originalArray);
  * // -> originalArray ['a', 'b', 'c', 'd', 'e']
  * // -> resultArray ['e', 'd', 'c', 'b', 'a']
  */
-export default function immutableReverse(array) {
+export function reverse(array) {
   return [...array].reverse();
 }
