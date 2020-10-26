@@ -2,7 +2,7 @@
 
 Immutable versions of normally mutable array methods
 
-[![Travis](https://img.shields.io/travis/georapbox/immutable-arrays/master.svg)](https://travis-ci.org/georapbox/immutable-arrays.svg?branch=master)
+[![Build Status](https://travis-ci.com/georapbox/immutable-arrays.svg?branch=master)](https://travis-ci.com/georapbox/immutable-arrays)
 [![npm version](https://img.shields.io/npm/v/immutable-arrays.svg)](http://badge.fury.io/js/immutable-arrays)
 [![npm downloads](https://img.shields.io/npm/dt/immutable-arrays.svg)](http://badge.fury.io/js/immutable-arrays)
 [![npm license](https://img.shields.io/npm/l/immutable-arrays.svg)](http://badge.fury.io/js/immutable-arrays)
