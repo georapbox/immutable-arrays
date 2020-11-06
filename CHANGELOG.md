@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v4.1.0
+
+- Replace Mocha and Chai with Jest for testing the library.
+- Replace codecov with coveralls for tests coverage.
+- Update `devDependencies`.
+
 ## v4.0.0
 
 ### BREAKING CHANGES

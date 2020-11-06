@@ -1,21 +1,18 @@
 import { reverse } from '../src/reverse';
-import chai from 'chai';
-
-const expect = chai.expect;
 
 const originalArray = ['a', 'b', 'c', 'd', 'e'];
 const resultArray = reverse(originalArray);
 
 describe('immutable-reverse', () => {
   it('original array should stay untouched', () => {
-    expect(originalArray).to.not.eql(resultArray);
+    expect(originalArray).not.toEqual(resultArray);
   });
 
   it('original and result arrays should have equal length', () => {
-    expect(resultArray).with.length(originalArray.length);
+    expect(resultArray).toHaveLength(originalArray.length);
   });
 
   it('elements in result array should be reversed', () => {
-    expect(resultArray).to.eql(['e', 'd', 'c', 'b', 'a']);
+    expect(resultArray).toEqual(['e', 'd', 'c', 'b', 'a']);
   });
 });

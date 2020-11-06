@@ -1,7 +1,4 @@
 import { splice } from '../src/splice';
-import chai from 'chai';
-
-const expect = chai.expect;
 
 const arr = ['a', 'b', 'c', 'd', 'e'];
 const res1 = splice(arr, 0);
@@ -17,73 +14,73 @@ const res10 = splice(arr);
 
 describe('immutable-splice', () => {
   it('original array should stay untouched', () => {
-    expect(res1).to.not.eql(arr);
-    expect(res2).to.not.eql(arr);
-    expect(res3).to.not.eql(arr);
-    expect(res4).to.not.eql(arr);
-    expect(res6).to.not.eql(arr);
-    expect(res7).to.not.eql(arr);
-    expect(res8).to.not.eql(arr);
-    expect(res9).to.not.eql(arr);
+    expect(res1).not.toEqual(arr);
+    expect(res2).not.toEqual(arr);
+    expect(res3).not.toEqual(arr);
+    expect(res4).not.toEqual(arr);
+    expect(res6).not.toEqual(arr);
+    expect(res7).not.toEqual(arr);
+    expect(res8).not.toEqual(arr);
+    expect(res9).not.toEqual(arr);
   });
 
   it('should remove all elements from array', () => {
-    expect(res1).with.length(0);
+    expect(res1).toHaveLength(0);
   });
 
   it('should remove first element from array', () => {
-    expect(res2).with.length(4);
-    expect(res2[0]).to.equal('b');
+    expect(res2).toHaveLength(4);
+    expect(res2[0]).toEqual('b');
   });
 
   it('should remove the first 3 elements from array', () => {
-    expect(res3).with.length(2);
-    expect(res3[0]).to.equal('d');
+    expect(res3).toHaveLength(2);
+    expect(res3[0]).toEqual('d');
   });
 
   it('should remove all elements from array if deleteCount is equal to array length', () => {
-    expect(res4).with.length(0);
+    expect(res4).toHaveLength(0);
   });
 
   it('should not remove any elements from array if deleteCount lower than 0', () => {
-    expect(res5).with.length(arr.length);
+    expect(res5).toHaveLength(arr.length);
   });
 
   it('should add 2 elements to the beginning of the array', () => {
-    expect(res6).with.length(7);
-    expect(res6[0]).to.equal('lorem');
-    expect(res6[1]).to.equal('ipsum');
-    expect(res6[6]).to.equal('e');
+    expect(res6).toHaveLength(7);
+    expect(res6[0]).toEqual('lorem');
+    expect(res6[1]).toEqual('ipsum');
+    expect(res6[6]).toEqual('e');
   });
 
   it('should add 2 elements to the end of the array', () => {
-    expect(res7).with.length(7);
-    expect(res7[0]).to.equal('a');
-    expect(res7[5]).to.equal('lorem');
-    expect(res7[6]).to.equal('ipsum');
+    expect(res7).toHaveLength(7);
+    expect(res7[0]).toEqual('a');
+    expect(res7[5]).toEqual('lorem');
+    expect(res7[6]).toEqual('ipsum');
   });
 
   it('should remove the first 2 elements and add 2 others in their places', () => {
-    expect(res8).with.length(5);
-    expect(res8[0]).to.equal('lorem');
-    expect(res8[1]).to.equal('ipsum');
-    expect(res8[3]).to.equal('d');
-    expect(res8[4]).to.equal('e');
-    expect(res8).to.not.include('a');
-    expect(res8).to.not.include('b');
+    expect(res8).toHaveLength(5);
+    expect(res8[0]).toEqual('lorem');
+    expect(res8[1]).toEqual('ipsum');
+    expect(res8[3]).toEqual('d');
+    expect(res8[4]).toEqual('e');
+    expect(res8).not.toContain('a');
+    expect(res8).not.toContain('b');
   });
 
   it('should remove the last 2 elements and add 2 others in their places', () => {
-    expect(res9).with.length(5);
-    expect(res9[3]).to.equal('lorem');
-    expect(res9[4]).to.equal('ipsum');
-    expect(res9[0]).to.equal('a');
-    expect(res9[1]).to.equal('b');
-    expect(res9).to.not.include('d');
-    expect(res9).to.not.include('e');
+    expect(res9).toHaveLength(5);
+    expect(res9[3]).toEqual('lorem');
+    expect(res9[4]).toEqual('ipsum');
+    expect(res9[0]).toEqual('a');
+    expect(res9[1]).toEqual('b');
+    expect(res9).not.toContain('d');
+    expect(res9).not.toContain('e');
   });
 
   it('should return a new array with the same elements as the original one', () => {
-    expect(res10).to.eql(['a', 'b', 'c', 'd', 'e']);
+    expect(res10).toEqual(['a', 'b', 'c', 'd', 'e']);
   });
 });
